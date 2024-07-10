@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "brscripting"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = "^0.12.3"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.4"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "C", "N", "D", "ANN", "BLE", "B", "A", "PTH", "PD", "RUF"]
+ignore = ["D203", "D211", "D212", "PD901"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 20
